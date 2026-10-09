@@ -167,10 +167,21 @@ footer {
   padding: 1.25rem;
 }
 
-/* Fixed-width layout: used on the Stack page, width is intentionally rigid (640px) */
+/* Fixed-width layout: stack.html is a rigid 960px page, unlike the fluid pages */
+.fixed-layout {
+  width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 0 1.5rem rgba(10, 15, 29, 0.25);
+}
+
+.fixed-layout main {
+  width: auto;
+  max-width: none;
+  margin: 2.5rem 2rem;
+}
+
 .fixed-panel {
-  width: 640px;
-  margin: 0 auto 3rem;
+  margin: 0 0 3rem;
   background-color: var(--primary);
   color: var(--background);
   border-radius: 0.75rem;
