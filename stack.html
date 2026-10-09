@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stack | Gonzalo Seriche</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Stack</h1>
+      <p class="tagline">The tools I use every week</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="stack.html" aria-current="page">Stack</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Observability</h2>
+        <p>
+          Metrics and logs flow into one stack, so dashboards and alerts
+          share the same data.
+        </p>
+        <figure>
+          <img src="images/observability.svg" alt="Diagram: applications send metrics to Mimir and logs to Loki, both shown in Grafana">
+          <figcaption>Applications send metrics and logs; Grafana shows both.</figcaption>
+        </figure>
+      </section>
+      <section class="fixed-panel">
+        <h2>Tools at a glance</h2>
+        <dl>
+          <dt>Kubernetes</dt>
+          <dd>Google Kubernetes Engine clusters for production, development and tooling.</dd>
+          <dt>ArgoCD</dt>
+          <dd>GitOps delivery: the cluster follows what is in Git.</dd>
+          <dt>External Secrets Operator</dt>
+          <dd>Reads secrets from Google Secret Manager into the cluster.</dd>
+          <dt>Grafana, Mimir and Loki</dt>
+          <dd>Dashboards, metrics and logs.</dd>
+          <dt>AWS</dt>
+          <dd>ECS and Systems Manager for customer workloads.</dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Find me online</h2>
+        <p>
+          My code for this course lives on
+          <a href="https://github.com/gseriche">GitHub</a>.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Gonzalo Seriche. Project 2: First Turn-in, Fundamentals of Web Development.</p>
+    </footer>
+  </body>
+</html>
