@@ -1,0 +1,224 @@
+/* Palette inspired by terralithlabs.com: deep navy, ocean blue, cool off-white */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+:root {
+  --navy-900: #0a0f1d;
+  --navy-700: #14213d;
+  --primary: #1d3b73;
+  --accent: #3b73c9;
+  --accent-light: #8fb3ea;
+  --background: #f8f9fb;
+  --foreground: #0f1626;
+  --muted: #eceff4;
+  --muted-text: #4a5568;
+  --border: #d5dbe6;
+}
+
+/* Base: native browser font for body text */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+/* Imported font for headings */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Style element 1: dark header band */
+header {
+  background-color: var(--navy-900);
+  color: var(--background);
+  padding: 2.5rem 5% 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid var(--accent);
+}
+
+header h1 {
+  color: var(--background);
+}
+
+header .tagline {
+  color: var(--accent-light);
+  font-size: 1.125rem;
+  margin: 0.5em 0 1.5em;
+}
+
+/* Style element 2: centered horizontal navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  color: var(--background);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+  background-color: var(--accent);
+}
+
+/* Fluid layout: percentages and relative units */
+main {
+  width: 90%;
+  max-width: 62.5rem;
+  margin: 2.5rem auto;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Style element 3: content links */
+main a {
+  color: var(--accent);
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+}
+
+main a:hover,
+main a:focus {
+  border-bottom-color: var(--accent);
+}
+
+/* Style element 4: figures with rounded corners and shadow */
+figure {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 1rem rgba(10, 15, 29, 0.12);
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+figure img,
+figure video {
+  width: 100%;
+}
+
+figcaption {
+  padding: 0.75em 1em;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  border-top: 1px solid var(--border);
+}
+
+/* Style element 5: footer */
+footer {
+  background-color: var(--navy-700);
+  color: var(--accent-light);
+  text-align: center;
+  padding: 1.5rem 5%;
+  font-size: 0.875rem;
+  border-top: 4px solid var(--accent);
+}
+
+/* Cards (fluid, percentage widths) */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 30%;
+  min-width: 14rem;
+  background-color: var(--muted);
+  border-left: 5px solid var(--accent);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+/* Fixed-width layout: used on the Stack page, width is intentionally rigid (640px) */
+.fixed-panel {
+  width: 640px;
+  margin: 0 auto 3rem;
+  background-color: var(--primary);
+  color: var(--background);
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+}
+
+.fixed-panel h2 {
+  color: var(--background);
+}
+
+dl dt {
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 1em;
+}
+
+dl dd {
+  margin-left: 1.25em;
+  color: var(--muted-text);
+}
+
+.fixed-panel dt {
+  color: var(--accent-light);
+}
+
+.fixed-panel dd {
+  color: var(--background);
+}
+
+.timeline li {
+  border-left: 3px solid var(--accent);
+  padding: 0 0 1.5rem 1.25rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 0.35rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.timeline .when {
+  color: var(--muted-text);
+  font-size: 0.9rem;
+}
