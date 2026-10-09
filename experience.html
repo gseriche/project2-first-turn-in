@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Experience | Gonzalo Seriche</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Experience</h1>
+      <p class="tagline">Where I have worked and what I have built</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="experience.html" aria-current="page">Experience</a></li>
+          <li><a href="stack.html">Stack</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Roles</h2>
+        <ul class="timeline">
+          <li>
+            <h3>Senior DevOps / Infrastructure Engineer, Shoplift</h3>
+            <p class="when">Google Cloud, Kubernetes</p>
+            <p>
+              I operate the production, development and platform clusters on
+              Google Kubernetes Engine. I run regular healthchecks, keep
+              deployments in sync through GitOps, and manage secrets safely
+              from a central store.
+            </p>
+          </li>
+          <li>
+            <h3>Cloud Support Engineer, CR Software</h3>
+            <p class="when">Amazon Web Services</p>
+            <p>
+              I support enterprise customers running on AWS container
+              services. A typical task is collecting and analysing thread dumps
+              from ECS nodes to find stuck or slow Java processes.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>How a change reaches production</h2>
+        <figure>
+          <img src="images/gitops-flow.svg" alt="Flow diagram: Git repository, ArgoCD, then the Kubernetes cluster">
+          <figcaption>Git is the source of truth. ArgoCD notices a change and applies it to the cluster.</figcaption>
+        </figure>
+        <p>
+          Learn more about the tool behind this flow in the
+          <a href="https://argo-cd.readthedocs.io/">ArgoCD documentation</a>.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Gonzalo Seriche. Project 2: First Turn-in, Fundamentals of Web Development.</p>
+    </footer>
+  </body>
+</html>
